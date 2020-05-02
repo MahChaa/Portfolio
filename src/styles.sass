@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css?family=Marck+Script&text=Mahdi%20Chaari')
 
 %baseText
-  margin: 0
   font-family: 'IBM Plex Sans', 'sans-serif'
   font-size: 2.5vh
 
@@ -12,7 +11,13 @@
   font-family: 'Overpass', 'serif'
 
 %menuText
-  @extend %baseText
   font-family: 'Overlock', 'monospace'
-  font-size: 3.5vh
+  font-size: 2vh
+
+mdb-navbar
+  @extend %menuText
+
+#logo
+  font-family: 'Marck Script', 'cursive'
+  font-size: 4vh
 

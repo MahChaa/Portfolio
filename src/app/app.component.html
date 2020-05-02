@@ -1,74 +1,99 @@
 <header>
   <!--Navbar-->
-  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark elegant-color p-1 pl-3" [containerInside]="false">
 
     <!-- Navbar brand -->
-    <mdb-navbar-brand><a class="navbar-brand" href="#">Navbar</a></mdb-navbar-brand>
+    <mdb-navbar-brand>
+      <span class="navbar-brand m-0 p-0 mr-5" id="logo">
+        Mahdi Chaari
+      </span>
+    </mdb-navbar-brand>
 
     <!-- Collapsible content -->
     <links>
 
       <!-- Links -->
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+        <li class="nav-item active mx-3">
+          <a class="nav-link waves-light" mdbWavesEffect routerLink="/">
+            Home
+            <span class="sr-only">
+              (current)
+            </span>
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect>Features</a>
+
+        <li class="nav-item mx-3">
+          <a class="nav-link waves-light" mdbWavesEffect routerLink="/education">
+            Education
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link waves-light" mdbWavesEffect>Pricing</a>
+
+        <li class="nav-item mx-3">
+          <a class="nav-link waves-light" mdbWavesEffect routerLink="/work-experience">
+            Work Experience
+          </a>
         </li>
 
         <!-- Dropdown -->
-        <li class="nav-item dropdown" dropdown>
-          <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light">
-            Basic dropdown<span class="caret"></span></a>
+        <li class="nav-item mx-3" dropdown>
+          <div class="d-inline-flex">
+            <a class="nav-link waves-light" mdbWavesEffect routerLink="/projects">
+              Projects
+            </a>
+
+            <a class="nav-link px-0" dropdownToggle>
+              <mdb-icon fas icon="caret-down"></mdb-icon>
+            </a>
+          </div>
+
           <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Action</a>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Another action</a>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Something else here</a>
+            <a class="dropdown-item" href="#">
+              C++ Game
+            </a>
+
+            <a class="dropdown-item" href="#">
+              The Dining Philosophers
+            </a>
+
+            <a class="dropdown-item" href="#">
+              E-Commerce Web Application
+            </a>
+
             <div class="divider dropdown-divider"></div>
-            <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+
+            <a class="dropdown-item" href="#">
+              Portfolio Web Application
+            </a>
           </div>
         </li>
 
+        <li class="nav-item mx-3">
+          <a class="nav-link waves-light" mdbWavesEffect routerLink="/about-me">
+            About Me
+          </a>
+        </li>
       </ul>
-      <!-- Links -->
 
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item">
           <a class="nav-link">
-            <mdb-icon fab icon="twitter"></mdb-icon>
+            <mdb-icon fab icon="linkedin-in" ng-href="https://www.linkedin.com/in/Mahdi-Chaari-SWE/"></mdb-icon>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link">
-            <mdb-icon fab icon="google-plus"></mdb-icon>
+            <mdb-icon fab icon="github"></mdb-icon>
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link">
-            <div class="btn-group" mdbDropdown>
-              <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
-              <div class="dropdown-menu dropdown-menu-right dropdown-primary">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <a class="dropdown-item" href="#">Something else here</a>
-                <div class="divider dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Separated link</a>
-              </div>
-            </div>
+            <mdb-icon fas icon="envelope"></mdb-icon>
           </a>
         </li>
       </ul>
     </links>
-    <!-- Collapsible content -->
-
   </mdb-navbar>
-  <!--/.Navbar-->
 </header>
-
-
 
 <router-outlet></router-outlet>
