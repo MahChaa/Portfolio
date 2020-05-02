@@ -1,3 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Overpass|Overlock')
 @import url('https://fonts.googleapis.com/css?family=Marck+Script&text=Mahdi%20Chaari')
+
+%baseText
+  margin: 0
+  font-family: 'IBM Plex Sans', 'sans-serif'
+  font-size: 2.5vh
+
+%accentText
+  @extend %baseText
+  font-family: 'Overpass', 'serif'
+
+%menuText
+  @extend %baseText
+  font-family: 'Overlock', 'monospace'
+  font-size: 3.5vh
+
