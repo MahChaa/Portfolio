@@ -1,10 +1,10 @@
 <header>
   <!--Navbar-->
-  <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark elegant-color p-1 pl-3" [containerInside]="false">
+  <mdb-navbar SideClass="navbar navbar-expand-md navbar-dark elegant-color p-0" [containerInside]="false">
 
     <!-- Navbar brand -->
     <mdb-navbar-brand>
-      <span class="navbar-brand m-0 p-0 mr-5" id="logo">
+      <span class="navbar-brand ml-4 mr-5 p-0 logo">
         Mahdi Chaari
       </span>
     </mdb-navbar-brand>
@@ -42,7 +42,7 @@
               Projects
             </a>
 
-            <a class="nav-link px-0" dropdownToggle>
+            <a class="nav-link px-0 waves-light" mdbWavesEffect dropdownToggle>
               <mdb-icon fas icon="caret-down"></mdb-icon>
             </a>
           </div>
@@ -77,19 +77,70 @@
 
       <ul class="navbar-nav ml-auto nav-flex-icons">
         <li class="nav-item">
-          <a class="nav-link">
-            <mdb-icon fab icon="linkedin-in" ng-href="https://www.linkedin.com/in/Mahdi-Chaari-SWE/"></mdb-icon>
+          <a class="nav-link" href="https://www.linkedin.com/in/mahdi-chaari-swe/" target="_blank">
+            <mdb-icon fab icon="linkedin-in"></mdb-icon>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">
+          <a class="nav-link" href="https://github.com/MahChaa" target="_blank">
             <mdb-icon fab icon="github"></mdb-icon>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">
+          <a class="nav-link" (click)="emailModal.show()">
             <mdb-icon fas icon="envelope"></mdb-icon>
           </a>
+
+          <div mdbModal [config]="{backdrop: false}" #emailModal="mdbModal"
+               class="modal fade right" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-side modal-top-right" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title w-100">Email Address</h4>
+                </div>
+
+                <div class="modal-body">
+                  <p class="m-0">
+                    Here is my email address:
+                  </p>
+
+                  <samp>
+                    mahdi-chaari@hotmail.com
+                  </samp>
+
+                  <button type="button" mdbBtn color="link" class="copy p-2 ml-3"
+                          cdkCopyToClipboard="mahdi-chaari@hotmail.com" size="md" mdbWavesEffect>
+                    <mdb-icon far icon="clipboard"></mdb-icon>
+                    &nbsp;Copy
+                  </button>
+
+                  <p class="mt-1 text-justify">
+                    If you have any questions regarding this website or its content, please send me an email.
+                    I'm currently looking for an internship, so do send me an email if you have work opportunities
+                    for me. I'll be glad to arrange a phone or an in person meeting.
+                  </p>
+
+                  <blockquote class="blockquote-warning bq-warning">
+                    <mdb-icon fas icon="exclamation-triangle" class="text-color-warning"></mdb-icon>
+
+                    &nbsp;The SEND EMAIL button will open your default email application.
+                  </blockquote>
+                </div>
+
+                <div class="modal-footer">
+                  <button type="button" mdbBtn color="secondary" class="waves-light"
+                          (click)="emailModal.hide()" mdbWavesEffect>
+                    Maybe Another Time
+                  </button>
+
+                  <a type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect
+                  href="mailto:mahdi-chaari@hotmail.com?subject=About%20Your%20Portfolio">
+                    Send Email
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </li>
       </ul>
     </links>

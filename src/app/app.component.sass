@@ -1,0 +1,23 @@
+@import "./src/variables"
+
+.logo
+  font-family: 'Marck Script', cursive
+  font-size: $font-size-lg * 2
+
+mdb-navbar
+  a.nav-link
+    font-family: $headings-font-family
+    font-size: $font-size-lg
+
+  a.dropdown-item
+    font-family: $headings-font-family
+    font-size: $font-size-base
+
+@import "~angular-bootstrap-md/assets/scss/core/typography"
+
+.blockquote-warning
+  @extend .blockquote
+  font-size: $font-size-sm
+
+  mdb-icon
+    color: $warning

@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-// UI library
+// Angular Modules
+import {ClipboardModule} from '@angular/cdk/clipboard';
+
+// UI libraries
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 // Routing
@@ -19,7 +22,8 @@ import { HomeComponent } from './home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
+    ClipboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
