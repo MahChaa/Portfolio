@@ -1,0 +1,15 @@
+$font-family-base: 'IBM Plex Sans', sans-serif
+$headings-font-family: 'Overlock', serif
+$btn-font-family: 'Overpass', monospace
+//For some unknown reason, this variable is used in the body instead of $font-family-base
+$roboto-font-family: $font-family-base
+
+/*
+  We must import the bootstrap variables and their dependencies if we want to import stylesheets
+  We do the import at the end to set the variables before they are given a !default value
+  */
+@import "~angular-bootstrap-md/assets/scss/bootstrap/functions"
+@import "~angular-bootstrap-md/assets/scss/bootstrap/variables"
+@import "~angular-bootstrap-md/assets/scss/core/mixins"
+@import "~angular-bootstrap-md/assets/scss/core/colors"
+@import "~angular-bootstrap-md/assets/scss/core/variables"
